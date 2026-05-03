@@ -434,8 +434,15 @@ footer{background:#d8c89a;max-width:1200px;margin:0 auto;text-align:center;paddi
     flex: none !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 0 6px 0 !important;
+    margin: 0 0 8px 0 !important;
     padding: 0 !important;
+  }
+  .ev-name {
+    font-size: 18px !important;
+    letter-spacing: 0.15em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
   .ev-imgs {
     flex: none !important;
@@ -460,9 +467,15 @@ footer{background:#d8c89a;max-width:1200px;margin:0 auto;text-align:center;paddi
     box-sizing: border-box !important;
   }
   .ev-img:first-child:nth-last-child(2),
-  .ev-img:first-child:nth-last-child(2) ~ .ev-img {
+  .ev-img:first-child:nth-last-child(2) ~ .ev-img,
+  .ev-ph:first-child:nth-last-child(2),
+  .ev-ph:first-child:nth-last-child(2) ~ .ev-ph {
     aspect-ratio: 3 / 4 !important;
   }
+  
+  .form-wrap, #form { padding: 0 8px !important; }
+  .form-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  input, select, textarea { font-size: 16px !important; }
 }
 </style>
 </head>
