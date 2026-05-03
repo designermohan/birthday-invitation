@@ -103,7 +103,7 @@ footer{background:#d8c89a;max-width:1200px;margin:0 auto;text-align:center;paddi
   .photo-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 2px !important; }
   .photo-grid img { aspect-ratio: 3 / 4.4 !important; width: 100% !important; }
 
-  .hero { text-align: left !important; }
+  .hero { text-align: left !important; padding: 22px 18px 14px !important; }
   .hero-eyebrow, .hero-tagline, .hero-dates { margin-left: 0 !important; margin-right: 0 !important; }
   .hero-tagline { max-width: 100% !important; }
   .hero-dates { font-weight: 400 !important; line-height: 1.85 !important; letter-spacing: .2em !important; font-size: 9.5px !important; }
@@ -118,10 +118,19 @@ footer{background:#d8c89a;max-width:1200px;margin:0 auto;text-align:center;paddi
 
   .ev-row { display: flex !important; flex-direction: column !important; align-items: stretch !important; padding: 24px 8px 0 8px !important; margin-bottom: 0 !important; border-top: 1px solid rgba(160,128,64,.12) !important; }
   .ev-time { font-family: 'Cormorant Garamond','Hoefler Text',Georgia,serif !important; font-style: italic !important; font-size: 10px !important; letter-spacing: .28em !important; color: rgba(122,101,53,.5) !important; margin: 0 0 6px 0 !important; display: block !important; order: 0 !important; }
-  .ev-name { font-size: 10px !important; letter-spacing: .08em !important; margin: 0 0 10px 0 !important; order: 1 !important; white-space: nowrap !important; overflow: visible !important; }
+  .ev-name { font-size: 9.5px !important; letter-spacing: .05em !important; margin: 0 0 8px 0 !important; order: 1 !important; white-space: normal !important; overflow: visible !important; word-break: break-word !important; }
   .ev-body { font-family: 'Jost',-apple-system,BlinkMacSystemFont,'Avenir Next','Avenir',sans-serif !important; font-style: normal !important; font-size: 13px !important; font-weight: 300 !important; line-height: 1.55 !important; color: rgba(60,40,16,0.80) !important; margin: 0 0 0 0 !important; padding: 0 !important; order: 2 !important; }
-  .ev-text { order: 0 !important; display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 0 2px 0 !important; }
+  .ev-text { order: 0 !important; display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 0 6px 0 !important; }
   .ev-imgs { order: 1 !important; display: flex !important; flex-wrap: wrap !important; align-self: stretch !important; width: 100% !important; max-width: 100% !important; min-width: 0 !important; gap: 4px !important; margin: 0 0 40px 0 !important; padding: 0 !important; box-sizing: border-box !important; }
+  /* 2-image: portrait 3:4 side-by-side */
+  .ev-imgs.imgs-2 .ev-img,
+  .ev-imgs.imgs-2 .ev-ph { width: calc(50% - 2px) !important; height: auto !important; aspect-ratio: 3 / 4 !important; flex: 0 0 calc(50% - 2px) !important; object-fit: cover !important; display: block !important; }
+
+  /* 4-image: 2x2 square grid */
+  .ev-imgs.imgs-4 .ev-img,
+  .ev-imgs.imgs-4 .ev-ph { width: calc(50% - 2px) !important; height: auto !important; aspect-ratio: 1 / 1 !important; flex: 0 0 calc(50% - 2px) !important; object-fit: cover !important; display: block !important; }
+
+  /* default (1 or 3 images): square */
   .ev-img, .ev-ph { width: calc(50% - 2px) !important; height: auto !important; aspect-ratio: 1 / 1 !important; flex: 0 0 calc(50% - 2px) !important; object-fit: cover !important; display: block !important; }
   .ev-img:first-child:nth-last-child(2), .ev-img:first-child:nth-last-child(2) ~ .ev-img { aspect-ratio: 3 / 4 !important; }
   .event-badge { font-size: 8.5px !important; padding: 5px 9px !important; margin-top: 10px !important; }
@@ -216,6 +225,12 @@ footer{background:#d8c89a;max-width:1200px;margin:0 auto;text-align:center;paddi
   .event-badge { font-size: 8px !important; padding: 4px 8px !important; margin-top: 8px !important; }
 
   /* Images: 2 max, portrait for 2-image events */
+  /* 2-image: portrait 3:4 side-by-side */
+  .ev-imgs.imgs-2 .ev-img,
+  .ev-imgs.imgs-2 .ev-ph { width: calc(50% - 4px) !important; aspect-ratio: 3 / 4 !important; flex: 0 0 calc(50% - 4px) !important; }
+  /* 4-image: 2x2 square grid */
+  .ev-imgs.imgs-4 .ev-img,
+  .ev-imgs.imgs-4 .ev-ph { width: calc(50% - 4px) !important; aspect-ratio: 1 / 1 !important; flex: 0 0 calc(50% - 4px) !important; }
   .ev-img, .ev-ph {
     width: calc(50% - 4px) !important;
     height: auto !important;
