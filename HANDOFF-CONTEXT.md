@@ -79,7 +79,7 @@ I'm building a personal HTML invitation page for **Sasa's 30th birthday weekend*
 - `--cream-deep: #e8dcc0`
 - `--gold: #b89968`
 - `--ink: #3c2810`
-- `--sub: #7a6535`
+- `--sub: #1e180a`
 
 **Font system (with strong Apple-system fallbacks for Dropbox/file:// previews):**
 - Hero title: `'Italiana','Didot','Bodoni 72','Hoefler Text',Georgia,serif`
