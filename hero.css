@@ -232,7 +232,7 @@ body::before {
   padding: 3.25rem 3.25rem 3.25rem 0;
   display: grid;
   grid-template-rows: 1.55fr 1fr;
-  gap: 14px;
+  gap: 14px !important;
   overflow: hidden;
 }
 
@@ -525,7 +525,7 @@ body::before {
   .hero__tagline { font-size: 1.1rem; }
   .hero__meta { margin-top: 2rem; gap: 2.5rem; }
   .meta-item__value { font-size: 1.3rem; }
-  .hero__right { padding: 2rem 2rem 2rem 0; }
+  .hero__right { padding: 2rem 2rem 2rem 0; gap: 2px !important;}
 }
 
 /* Tablet & below */
@@ -561,9 +561,9 @@ body::before {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .hero__left { padding: 3rem 1.5rem 2rem; }
-  .hero__right { padding: 0 1.5rem 3rem; grid-template-rows: 50vh auto; }
+  .hero__left { padding: 2rem 1.5rem 2rem; }
+  .hero__right { padding: 0 0rem 2rem; grid-template-rows: 50vh auto; }
   .hero__meta { flex-wrap: wrap; gap: 1.5rem; }
-  .hero__tiles { gap: 8px; }
+  .hero__tiles { gap: 2px; }
   .footer__meta { gap: 1.5rem; }
 }
