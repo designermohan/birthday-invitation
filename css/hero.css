@@ -43,7 +43,7 @@ html, body {
 }
 
 body {
-  background: var(--color-cream);
+  /* background: var(--color-cream); */
   color: var(--color-ink);
   font-family: var(--font-body);
   font-weight: 400;
@@ -122,7 +122,7 @@ body::before {
 /* Vertical rail label — centered against the title block */
 .hero__rail {
   position: absolute;
-  left: -3.5rem;
+  left: -30%;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   transform-origin: center center;
@@ -239,7 +239,7 @@ body::before {
 /* Featured image (convertible) */
 .hero__feature {
   position: relative;
-  margin: 0;
+  margin-bottom: 7px;
   overflow: hidden;
   box-shadow: 0 28px 56px rgba(26, 22, 18, 0.18);
   opacity: 0;
@@ -276,7 +276,7 @@ body::before {
 .hero__tiles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
 .tile {
@@ -386,8 +386,8 @@ body::before {
 /* Day rows */
 .day {
   display: grid;
-  grid-template-columns: 200px 1fr 1.2fr;
-  gap: 3.75rem;
+  /* grid-template-columns: 200px 1fr 1.2fr; */
+  gap: 1rem;
   padding: 2.6rem 0;
   border-bottom: 1px solid rgba(26, 22, 18, 0.1);
   align-items: start;
@@ -562,8 +562,36 @@ body::before {
 /* Mobile */
 @media (max-width: 600px) {
   .hero__left { padding: 2rem 1.5rem 2rem; }
-  .hero__right { padding: 0 0rem 2rem; grid-template-rows: 50vh auto; }
+  .hero__right { padding: 0 0rem 0;
+        grid-template-rows: 50vh auto;
+        background: #ffde9b; }
+        .page {
+            padding: 32px 20px 0px;
+        }
+        .ev-time, .ev-name {
+            margin-top: 10px !important;
+            margin-bottom: 0 !important;
+        }
+            .event-badge {
+                margin-bottom: 10px !important; 
+            }
+                .ev-imgs {
+        margin-bottom: 0 !important;
+    }
+    .mobFull{
+        width: 100% !important;
+        display: flex !important;
+    }
+    .ev-imgs{
+        gap: 2px !important;
+    }
+        .ev-text{
+            margin-bottom: 0 !important;
+        }
   .hero__meta { flex-wrap: wrap; gap: 1.5rem; }
   .hero__tiles { gap: 2px; }
   .footer__meta { gap: 1.5rem; }
+ 
+.hero__feature {
+    margin-bottom: 0px;}
 }
